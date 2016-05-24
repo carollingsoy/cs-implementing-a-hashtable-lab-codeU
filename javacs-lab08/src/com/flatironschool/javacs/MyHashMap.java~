@@ -40,6 +40,11 @@ public class MyHashMap<K, V> extends MyBetterMap<K, V> implements Map<K, V> {
 	 * 
 	 */
 	protected void rehash() {
+		// collect the entries in the table, resize the table, 
+		// and then put the entries back in.
+		// use MyBetterMap.makeMaps and MyLinearMap.getEntries
+		// solution should double the number of maps, k
+
 		List<MyLinearMap<K, V>> oldMaps = maps;
 		makeMaps(oldMaps.size() * 2);
 		for (MyLinearMap<K, V> map: oldMaps) {

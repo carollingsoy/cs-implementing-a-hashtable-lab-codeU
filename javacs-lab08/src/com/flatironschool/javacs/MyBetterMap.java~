@@ -72,10 +72,7 @@ public class MyBetterMap<K, V> implements Map<K, V> {
 	@Override
 	public boolean containsValue(Object target) {
 		// to find a value, we have to search all maps
-		for (MyLinearMap<K, V> map: maps) {
-			if (map.containsValue(target))
-				return true;
-		}
+        // TODO: fill this in.
 		return false;
 	}
 
